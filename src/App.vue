@@ -23,6 +23,9 @@ export default {
   data() {
     return {
       bookList: [],
+      titleValue: "",
+      authorValue: "",
+      numberValue: ""
     };
   },
   methods: {
@@ -32,33 +35,24 @@ export default {
         authorValue: authorValue,
         numberValue: numberValue,
       });
-      // this.bookList = JSON.parse(localStorage.getItem("bookList"));
     },
     deleteBook(index) {
       this.bookList.splice(index, 1);
     },
   },
   mounted() {
-    // console.log("App mounted!");
-    // if (localStorage.getItem("bookList")) {
-    //   this.bookList = JSON.parse(localStorage.getItem("bookList"));
-    // }
+    if (localStorage.getItem("bookList")) {
+      this.bookList = JSON.parse(localStorage.getItem("bookList"));
+    }
     if (localStorage.booklist) {
       this.booklist = JSON.parse(localStorage.booklist);
     }
   },
   watch: {
-    // bookList: {
-    //   handler() {
-    //     console.log("BookList changed");
-    //     localStorage.setItem("bookList", JSON.stringify(this.bookList));
-    //   },
-    // },
-    //сохраняем данные
-    booklist: {
-      handler(newBook) {
-        console.log(newBook);
-        localStorage.booklist = JSON.stringify(newBook);
+    bookList: {
+      handler() {
+        // console.log("BookList changed");
+        localStorage.setItem("bookList", JSON.stringify(this.bookList));
       },
     },
   },

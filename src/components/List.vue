@@ -4,7 +4,7 @@
       <tr>
         <th>Title</th>
         <th>Auther</th>
-        <th>Number</th>
+        <th>Rating</th>
         <th></th>
       </tr>
     </thead>

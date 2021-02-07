@@ -10,8 +10,8 @@
         <input type="text" id="author" v-model="authorValue" required>
       </div>
       <div>
-        <label for="numValue">Number</label>
-        <input type="number" id="numValue" v-model="numberValue" required>
+        <label for="rating">Rating</label>
+        <input type="number" id="rating" v-model="numberValue" required>
       </div>
       <button type="submit" :disabled="numberValue <=0">Add Book</button>
     </form>
