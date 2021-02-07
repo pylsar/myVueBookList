@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Храните книги в порядке</h1>
     <Form @addBook="addBook" />
     <List
       :titleValue="titleValue"
@@ -60,5 +61,21 @@ export default {
 </script>
 
 <style style="scss">
+*{
+  margin: 0;
+  padding: 0;
+}
+#app{
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+  font-size: 5vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 
 </style>

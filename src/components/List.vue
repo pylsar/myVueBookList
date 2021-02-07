@@ -13,7 +13,7 @@
       <td>{{book.authorValue}}</td>
       <td>{{book.numberValue}}</td>
       <td>
-        <button @click="deleteBook(index)">delete</button>
+        <button class="btn__remove" @click="deleteBook(index)">delete</button>
       </td>
     </tbody>
   </table>
@@ -29,4 +29,33 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.table{
+    width: 100%;
+    & thead{
+        & tr{
+            & th{
+                width: 25%;
+                text-align: left;
+                padding: 12px;
+            }
+        }
+    }
+    & tbody{
+        & td{
+            width: 25%;
+            text-align: left;
+            padding: 12px;
+        }
+    }
+}
+.btn__remove{
+    outline: none;
+    border: none;
+    padding: 12px;
+    background: rgb(247, 81, 4);
+    cursor: pointer;
+}
+</style>
 
