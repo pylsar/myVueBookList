@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Theme/>
     <h1>Храните книги в порядке</h1>
     <Form @addBook="addBook" />
     <List
@@ -13,11 +14,13 @@
 </template> 
 
 <script>
+import Theme from "./components/Theme.vue";
 import Form from "./components/Form.vue";
 import List from "./components/List.vue";
 export default {
   name: "App",
   components: { 
+    Theme,
     Form,
     List 
   },
