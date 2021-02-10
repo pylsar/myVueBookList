@@ -1,5 +1,4 @@
 <template>
-  <div>
     <form class="form" @submit.prevent="addBook">
         <div class="form__content">
             <div class="form__item">
@@ -17,7 +16,6 @@
         </div>
         <button class="btn__add" type="submit" :disabled="numberValue <=0">Add Book</button>
     </form>
-  </div>
 </template>
 <script>
 export default {
@@ -41,28 +39,28 @@ export default {
 </script>
 <style lang="scss">
     form{
-        display: flex;
-        width: 100%;
-        padding-bottom: 50px;
+      display: flex;
+      width: 100%;
+      padding-bottom: 50px;
     }
     .btn__add{
-        width: 20%;
-        cursor: pointer;
+      width: 20%;
+      cursor: pointer;
     }
     .form__content{
-        flex: 1;
+      flex: 1;
     }
     .form__item{
-        display: flex;
-        width: 100%;
-        height: 30px;
-        & label{
-            width: 30%;
-        }
-        & input{
-            flex: 1;
-            outline: none;
-        }
+      display: flex;
+      width: 100%;
+      height: 30px;
+      & label{
+          width: 30%;
+      }
+      & input{
+        flex: 1;
+        outline: none;
+      }
     }
 </style>
 
